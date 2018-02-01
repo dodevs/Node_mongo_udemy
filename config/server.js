@@ -7,7 +7,7 @@ var app = express(); //Instancia o modulo
 app.set('view engine', 'ejs');
 app.set('views', './app/views'); //O diretório raiz é onde o modulo esta sendo utilizado
 
-
+app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true})); //Body parser implementado como Middleware
 app.use(expressValidator());
 
